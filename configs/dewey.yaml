@@ -1,0 +1,11 @@
+# Per-agent overrides
+trigger:
+  kind: "delta_pct"   # delta_pct | rsi | macd | custom
+  buy_pct:  1.2
+  sell_pct: 1.6
+limits:
+  min_qty: 0.1
+  max_pos: 5.0
+schedule:
+  on_hours: 18
+  off_hours: 6

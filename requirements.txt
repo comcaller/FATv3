@@ -1,0 +1,9 @@
+websockets>=12
+aiohttp>=3.9
+pydantic>=2
+python-dotenv>=1.0
+tenacity>=8
+loguru>=0.7
+uvloop; platform_system != "Windows"
+streamlit>=1.36
+PyYAML>=6
