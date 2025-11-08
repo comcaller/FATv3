@@ -4,6 +4,13 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 import asyncio, sys, yaml, os
 from pydantic import BaseModel
 from fat_core.agent import Agent, AgentConfig
+from fat_core.price import PriceFeed
+import yaml, os
+with open(os.path.expanduser("~/FAT/configs/common.yaml"), "r") as f:
+    COMMON = yaml.safe_load(f) or {}
+price_source = (COMMON.get("price_source") or "sim").lower()
+symbol       = COMMON.get("symbol") or "SOLUSDT"
+agent.feed = PriceFeed(price_source, symbol=symbol)
 
 class Common(BaseModel):
     exchange: str

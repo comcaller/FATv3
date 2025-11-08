@@ -1,5 +1,5 @@
-exchange: "sim"          # "sim" | "robinhood" | "binance" | "brave" | "crypto.com"
-base: "SOL"
-quote: "USX"
-poll_ms: 1200
+# shared settings
 log_dir: "/home/roa/FAT/logs"
+poll_ms: 1000
+price_source: "sim"        # "sim" | "binance" | "pyth"
+symbol: "SOLUSDT"          # used by binance adapter
